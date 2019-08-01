@@ -26,6 +26,8 @@ func main() {
 		fmt.Printf("%s/p2p/%s\n", ips, h2.ID())
 	}
 
+	fmt.Printf("%s/p2p/%s\n", h2.Addrs()[len(h2.Addrs())-1], h2.ID())
+
 	select {}
 
 }

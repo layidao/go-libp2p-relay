@@ -4,7 +4,26 @@ An example that demonstrates how to use circuit relay.
 
 This is an example that quickly shows how to use the `github.com/libp2p/go-libp2p-circuit` package to  build and use relay peer.
 
-This example is based on the [libp2p/go-libp2p-examples/relay](https://github.com/libp2p/go-libp2p-examples/tree/master/relay) modification, and the difference from the source code is that this example splits a file in the original text into 3  peers.
+This example is based on the [libp2p/go-libp2p-examples/relay](https://github.com/libp2p/go-libp2p-examples/tree/master/relay) modification, and the difference from the source code is that this example splits a file in the original text into 3  peers. And a particularly important change is
+
+
+```go
+// code in https://github.com/libp2p/go-libp2p-examples/blob/b7ac9e91865656b3ec13d18987a09779adad49dc/relay/main.go#L68
+// Creates a relay address
+relayaddr, err := ma.NewMultiaddr("/p2p-circuit/ipfs/" + h3.ID().Pretty())
+if err != nil {
+	panic(err)
+}
+
+relayaddr, err := ma.NewMultiaddr(fmt.Printf("%s/p2p/%s\n", h2.Addrs()[len(h2.Addrs())-1], h2.ID()) + "/p2p-circuit/ipfs/" + h3.ID().Pretty())
+if err != nil {
+	panic(err)
+}
+
+
+
+```
+
 
 NodeA and NodeB are behind NAT, reverse proxies, firewalls and/or simply don't able to establish a direct connection to each other.
 
