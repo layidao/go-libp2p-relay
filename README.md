@@ -71,8 +71,8 @@ If all goes well, you will see the output `Meow! It worked!` at the terminal of 
 
 ## Thanks
 
-[libp2p/go-libp2p-examples](https://github.com/libp2p/go-libp2p-examples/tree/master/relay)
-[raulk](https://github.com/raulk)
-[upperwal](https://github.com/upperwal)
+[libp2p/go-libp2p-examples](https://github.com/libp2p/go-libp2p-examples/tree/master/relay)  
+[raulk](https://github.com/raulk)  
+[upperwal](https://github.com/upperwal)  
 
 
